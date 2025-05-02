@@ -1,0 +1,14 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the estados_contacto_init() hook (in hooks/estados_contacto.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="estados_contacto-estado_contacto_id-<%%VALUE(estado_contacto_id)%%>" class="estados_contacto-estado_contacto_id text-right text-bold"><%%VALUE(estado_contacto_id)%%></td>
+		<td id="estados_contacto-nombre-<%%VALUE(estado_contacto_id)%%>" class="estados_contacto-nombre text-bold"><%%VALUE(nombre)%%></td>
+		<td id="estados_contacto-descripcion-<%%VALUE(estado_contacto_id)%%>" class="estados_contacto-descripcion text-bold"><%%VALUE(descripcion)%%></td>
+		<td id="estados_contacto-dias_inactividad_min-<%%VALUE(estado_contacto_id)%%>" class="estados_contacto-dias_inactividad_min text-right text-bold"><%%VALUE(dias_inactividad_min)%%></td>
+		<td id="estados_contacto-dias_inactividad_max-<%%VALUE(estado_contacto_id)%%>" class="estados_contacto-dias_inactividad_max text-right text-bold"><%%VALUE(dias_inactividad_max)%%></td>
+		<td id="estados_contacto-orden-<%%VALUE(estado_contacto_id)%%>" class="estados_contacto-orden text-right text-bold"><%%VALUE(orden)%%></td>
+		<td id="estados_contacto-color-<%%VALUE(estado_contacto_id)%%>" class="estados_contacto-color text-bold"><%%VALUE(color)%%></td>

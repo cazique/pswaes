@@ -1,0 +1,11 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the tipos_actividad_init() hook (in hooks/tipos_actividad.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="tipos_actividad-tipo_actividad_id-<%%VALUE(tipo_actividad_id)%%>" class="tipos_actividad-tipo_actividad_id text-right text-bold"><%%VALUE(tipo_actividad_id)%%></td>
+		<td id="tipos_actividad-nombre-<%%VALUE(tipo_actividad_id)%%>" class="tipos_actividad-nombre text-bold"><%%VALUE(nombre)%%></td>
+		<td id="tipos_actividad-descripcion-<%%VALUE(tipo_actividad_id)%%>" class="tipos_actividad-descripcion text-bold"><%%VALUE(descripcion)%%></td>
+		<td id="tipos_actividad-requiere_resultado-<%%VALUE(tipo_actividad_id)%%>" class="tipos_actividad-requiere_resultado text-right text-bold"><%%VALUE(requiere_resultado)%%></td>

@@ -1,0 +1,478 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/inmuebles-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="inmuebles_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+
+<div class="panel-body hidden" id="inmuebles_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="inmuebles_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: Inmueble id -->
+				<div class="form-group inmuebles-inmueble_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="inmueble_id">Inmueble id<span class="text-danger"><%%TRANSLATION(*)%%></span></label>
+					<div class="col-lg-9">
+						<input maxlength="20" type="text" class="form-control" name="inmueble_id" id="inmueble_id" value="<%%VALUE(inmueble_id)%%>" required><div class="text-danger vspacer-md" id="inmueble_id-uniqueness-note" style="display: none;"><%%TRANSLATION(unique field error)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Referencia -->
+				<div class="form-group inmuebles-referencia">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="referencia">Referencia</label>
+					<div class="col-lg-9">
+						<input maxlength="30" type="text" class="form-control" name="referencia" id="referencia" value="<%%VALUE(referencia)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Propietario id -->
+				<div class="form-group inmuebles-propietario_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="propietario_id">Propietario id</label>
+					<div class="col-lg-9">
+						<input maxlength="20" type="text" class="form-control" name="propietario_id" id="propietario_id" value="<%%VALUE(propietario_id)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Estado -->
+				<div class="form-group inmuebles-estado">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="estado">Estado</label>
+					<div class="col-lg-9">
+						<%%COMBO(estado)%%>
+					</div>
+				</div>
+
+				<!-- Field: Tipologia id -->
+				<div class="form-group inmuebles-tipologia_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="tipologia_id">Tipologia id</label>
+					<div class="col-lg-9">
+						<input maxlength="11" type="text" class="form-control" name="tipologia_id" id="tipologia_id" value="<%%VALUE(tipologia_id)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Subtipologia id -->
+				<div class="form-group inmuebles-subtipologia_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="subtipologia_id">Subtipologia id</label>
+					<div class="col-lg-9">
+						<input maxlength="11" type="text" class="form-control" name="subtipologia_id" id="subtipologia_id" value="<%%VALUE(subtipologia_id)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Direccion id -->
+				<div class="form-group inmuebles-direccion_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="direccion_id">Direccion id</label>
+					<div class="col-lg-9">
+						<input maxlength="11" type="text" class="form-control" name="direccion_id" id="direccion_id" value="<%%VALUE(direccion_id)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Zona id -->
+				<div class="form-group inmuebles-zona_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="zona_id">Zona id</label>
+					<div class="col-lg-9">
+						<input maxlength="11" type="text" class="form-control" name="zona_id" id="zona_id" value="<%%VALUE(zona_id)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Dormitorios -->
+				<div class="form-group inmuebles-dormitorios">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dormitorios">Dormitorios</label>
+					<div class="col-lg-9">
+						<input maxlength="4" type="text" class="form-control" name="dormitorios" id="dormitorios" value="<%%VALUE(dormitorios)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Banos -->
+				<div class="form-group inmuebles-banos">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="banos">Banos</label>
+					<div class="col-lg-9">
+						<input maxlength="4" type="text" class="form-control" name="banos" id="banos" value="<%%VALUE(banos)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Aseos -->
+				<div class="form-group inmuebles-aseos">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="aseos">Aseos</label>
+					<div class="col-lg-9">
+						<input maxlength="4" type="text" class="form-control" name="aseos" id="aseos" value="<%%VALUE(aseos)%%>">
+					</div>
+				</div>
+
+				<!-- Field: M2 utiles -->
+				<div class="form-group inmuebles-m2_utiles">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="m2_utiles">M2 utiles</label>
+					<div class="col-lg-9">
+						<input maxlength="10" type="text" class="form-control" name="m2_utiles" id="m2_utiles" value="<%%VALUE(m2_utiles)%%>">
+					</div>
+				</div>
+
+				<!-- Field: M2 construidos -->
+				<div class="form-group inmuebles-m2_construidos">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="m2_construidos">M2 construidos</label>
+					<div class="col-lg-9">
+						<input maxlength="10" type="text" class="form-control" name="m2_construidos" id="m2_construidos" value="<%%VALUE(m2_construidos)%%>">
+					</div>
+				</div>
+
+				<!-- Field: M2 terraza -->
+				<div class="form-group inmuebles-m2_terraza">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="m2_terraza">M2 terraza</label>
+					<div class="col-lg-9">
+						<input maxlength="10" type="text" class="form-control" name="m2_terraza" id="m2_terraza" value="<%%VALUE(m2_terraza)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Altura -->
+				<div class="form-group inmuebles-altura">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="altura">Altura</label>
+					<div class="col-lg-9">
+						<input maxlength="20" type="text" class="form-control" name="altura" id="altura" value="<%%VALUE(altura)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Orientacion -->
+				<div class="form-group inmuebles-orientacion">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="orientacion">Orientacion</label>
+					<div class="col-lg-9">
+						<input maxlength="30" type="text" class="form-control" name="orientacion" id="orientacion" value="<%%VALUE(orientacion)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Estado conservacion -->
+				<div class="form-group inmuebles-estado_conservacion">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="estado_conservacion">Estado conservacion</label>
+					<div class="col-lg-9">
+						<input maxlength="30" type="text" class="form-control" name="estado_conservacion" id="estado_conservacion" value="<%%VALUE(estado_conservacion)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Ano construccion -->
+				<div class="form-group inmuebles-ano_construccion">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="ano_construccion">Ano construccion</label>
+					<div class="col-lg-9">
+						<input maxlength="6" type="text" class="form-control" name="ano_construccion" id="ano_construccion" value="<%%VALUE(ano_construccion)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Ano reforma -->
+				<div class="form-group inmuebles-ano_reforma">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="ano_reforma">Ano reforma</label>
+					<div class="col-lg-9">
+						<input maxlength="6" type="text" class="form-control" name="ano_reforma" id="ano_reforma" value="<%%VALUE(ano_reforma)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Ascensor -->
+				<div class="form-group inmuebles-ascensor">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="ascensor">Ascensor</label>
+					<div class="col-lg-9">
+						<input maxlength="4" type="text" class="form-control" name="ascensor" id="ascensor" value="<%%VALUE(ascensor)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Terraza -->
+				<div class="form-group inmuebles-terraza">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="terraza">Terraza</label>
+					<div class="col-lg-9">
+						<input maxlength="4" type="text" class="form-control" name="terraza" id="terraza" value="<%%VALUE(terraza)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Balcon -->
+				<div class="form-group inmuebles-balcon">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="balcon">Balcon</label>
+					<div class="col-lg-9">
+						<input maxlength="4" type="text" class="form-control" name="balcon" id="balcon" value="<%%VALUE(balcon)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Garaje -->
+				<div class="form-group inmuebles-garaje">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="garaje">Garaje</label>
+					<div class="col-lg-9">
+						<input maxlength="4" type="text" class="form-control" name="garaje" id="garaje" value="<%%VALUE(garaje)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Trastero -->
+				<div class="form-group inmuebles-trastero">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="trastero">Trastero</label>
+					<div class="col-lg-9">
+						<input maxlength="4" type="text" class="form-control" name="trastero" id="trastero" value="<%%VALUE(trastero)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Calefaccion tipo -->
+				<div class="form-group inmuebles-calefaccion_tipo">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="calefaccion_tipo">Calefaccion tipo</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="calefaccion_tipo" id="calefaccion_tipo" value="<%%VALUE(calefaccion_tipo)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Climatizacion -->
+				<div class="form-group inmuebles-climatizacion">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="climatizacion">Climatizacion</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="climatizacion" id="climatizacion" value="<%%VALUE(climatizacion)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Certificado energetico -->
+				<div class="form-group inmuebles-certificado_energetico">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="certificado_energetico">Certificado energetico</label>
+					<div class="col-lg-9">
+						<input maxlength="5" type="text" class="form-control" name="certificado_energetico" id="certificado_energetico" value="<%%VALUE(certificado_energetico)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Consumo energetico -->
+				<div class="form-group inmuebles-consumo_energetico">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="consumo_energetico">Consumo energetico</label>
+					<div class="col-lg-9">
+						<input maxlength="10" type="text" class="form-control" name="consumo_energetico" id="consumo_energetico" value="<%%VALUE(consumo_energetico)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Emisiones co2 -->
+				<div class="form-group inmuebles-emisiones_co2">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="emisiones_co2">Emisiones co2</label>
+					<div class="col-lg-9">
+						<input maxlength="10" type="text" class="form-control" name="emisiones_co2" id="emisiones_co2" value="<%%VALUE(emisiones_co2)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Referencia catastral -->
+				<div class="form-group inmuebles-referencia_catastral">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="referencia_catastral">Referencia catastral</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="referencia_catastral" id="referencia_catastral" value="<%%VALUE(referencia_catastral)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Fecha alta -->
+				<div class="form-group inmuebles-fecha_alta">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Fecha alta</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="fecha_alta"><%%VALUE(fecha_alta)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Ultima modificacion -->
+				<div class="form-group inmuebles-ultima_modificacion">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Ultima modificacion</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="ultima_modificacion"><%%VALUE(ultima_modificacion)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Llaves oficina -->
+				<div class="form-group inmuebles-llaves_oficina">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="llaves_oficina">Llaves oficina</label>
+					<div class="col-lg-9">
+						<input maxlength="4" type="text" class="form-control" name="llaves_oficina" id="llaves_oficina" value="<%%VALUE(llaves_oficina)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Notas privadas -->
+				<div class="form-group inmuebles-notas_privadas">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="notas_privadas">Notas privadas</label>
+					<div class="col-lg-9">
+						<textarea maxlength="65500" class="form-control" name="notas_privadas" id="notas_privadas" rows=" 5"><%%VALUE(notas_privadas)%%></textarea>
+					</div>
+				</div>
+
+				<!-- Field: Observaciones -->
+				<div class="form-group inmuebles-observaciones">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="observaciones">Observaciones</label>
+					<div class="col-lg-9">
+						<textarea maxlength="65500" class="form-control" name="observaciones" id="observaciones" rows=" 5"><%%VALUE(observaciones)%%></textarea>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2 dv-action-buttons" id="inmuebles_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+			$j('#inmuebles_dv_container-loading').addClass('hidden');
+			$j('#inmuebles_dv_container').removeClass('hidden');
+			if(!$j('.table_view').length || $j('[name=SelectedID]').val().length) AppGini.focusFormElement('inmuebles', 'inmueble_id');
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+
+			if(true /* !embedded_mode */) {
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.removeItem(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'inmuebles',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+									// in case the parent record was updated, we should update auto-fills
+									var updaterName = field_id + '_update_autofills';
+									if(typeof(window[updaterName]) == 'function')
+										window[updaterName]();
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+			inmueblesUniqueFields.forEach(fieldName => enforce_uniqueness('inmuebles', fieldName));
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=inmuebles&id=<%%URLVALUE(inmueble_id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=inmuebles&id=<%%URLVALUE(inmueble_id)%%>');
+					}
+				);
+			}
+		});
+
+		var inmueblesUniqueFields = [
+			'inmueble_id',
+		];
+	</script>

@@ -1,0 +1,57 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: Motivo cierre id -->
+		<div class="form-group motivos_cierre-motivo_cierre_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Motivo cierre id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(motivo_cierre_id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Nombre -->
+		<div class="form-group motivos_cierre-nombre" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nombre</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(nombre)%%></div>
+			</div>
+		</div>
+		<!-- Field: Descripcion -->
+		<div class="form-group motivos_cierre-descripcion" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Descripcion</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(descripcion)%%></div>
+			</div>
+		</div>
+		<!-- Field: Es positivo -->
+		<div class="form-group motivos_cierre-es_positivo" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Es positivo</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(es_positivo)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<script>
+	$j(function() {
+		// render read-only checkboxes in DVP
+		$j('form input[type=checkbox]:not(.hidden):checked')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-check"></i>');
+		$j('form input[type=checkbox]:not(.hidden):not(:checked)')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-unchecked"></i>')
+	})
+</script>

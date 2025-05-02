@@ -1,0 +1,11 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the subzonas_init() hook (in hooks/subzonas.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="subzonas-subzona_id-<%%VALUE(subzona_id)%%>" class="subzonas-subzona_id text-right"><%%SELECT%%><%%VALUE(subzona_id)%%><%%ENDSELECT%%></td>
+		<td id="subzonas-zona_id-<%%VALUE(subzona_id)%%>" class="subzonas-zona_id text-right"><%%SELECT%%><%%VALUE(zona_id)%%><%%ENDSELECT%%></td>
+		<td id="subzonas-nombre-<%%VALUE(subzona_id)%%>" class="subzonas-nombre"><%%SELECT%%><%%VALUE(nombre)%%><%%ENDSELECT%%></td>
+		<td id="subzonas-descripcion-<%%VALUE(subzona_id)%%>" class="subzonas-descripcion"><%%SELECT%%><%%VALUE(descripcion)%%><%%ENDSELECT%%></td>

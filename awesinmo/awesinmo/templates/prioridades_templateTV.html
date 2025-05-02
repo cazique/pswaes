@@ -1,0 +1,12 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the prioridades_init() hook (in hooks/prioridades.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="prioridades-prioridad_id-<%%VALUE(prioridad_id)%%>" class="prioridades-prioridad_id text-right"><%%SELECT%%><%%VALUE(prioridad_id)%%><%%ENDSELECT%%></td>
+		<td id="prioridades-nombre-<%%VALUE(prioridad_id)%%>" class="prioridades-nombre"><%%SELECT%%><%%VALUE(nombre)%%><%%ENDSELECT%%></td>
+		<td id="prioridades-descripcion-<%%VALUE(prioridad_id)%%>" class="prioridades-descripcion"><%%SELECT%%><%%VALUE(descripcion)%%><%%ENDSELECT%%></td>
+		<td id="prioridades-orden-<%%VALUE(prioridad_id)%%>" class="prioridades-orden text-right"><%%SELECT%%><%%VALUE(orden)%%><%%ENDSELECT%%></td>
+		<td id="prioridades-color-<%%VALUE(prioridad_id)%%>" class="prioridades-color"><%%SELECT%%><%%VALUE(color)%%><%%ENDSELECT%%></td>

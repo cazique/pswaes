@@ -1,0 +1,371 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/clientes-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="clientes_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+
+<div class="panel-body hidden" id="clientes_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="clientes_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: Cliente id -->
+				<div class="form-group clientes-cliente_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cliente_id">Cliente id<span class="text-danger"><%%TRANSLATION(*)%%></span></label>
+					<div class="col-lg-9">
+						<input maxlength="20" type="text" class="form-control" name="cliente_id" id="cliente_id" value="<%%VALUE(cliente_id)%%>" required><div class="text-danger vspacer-md" id="cliente_id-uniqueness-note" style="display: none;"><%%TRANSLATION(unique field error)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Nombre -->
+				<div class="form-group clientes-nombre">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="nombre">Nombre<span class="text-danger"><%%TRANSLATION(*)%%></span></label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="nombre" id="nombre" value="<%%VALUE(nombre)%%>" required>
+					</div>
+				</div>
+
+				<!-- Field: Apellidos -->
+				<div class="form-group clientes-apellidos">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="apellidos">Apellidos<span class="text-danger"><%%TRANSLATION(*)%%></span></label>
+					<div class="col-lg-9">
+						<input maxlength="100" type="text" class="form-control" name="apellidos" id="apellidos" value="<%%VALUE(apellidos)%%>" required>
+					</div>
+				</div>
+
+				<!-- Field: Nombre completo -->
+				<div class="form-group clientes-nombre_completo">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="nombre_completo">Nombre completo</label>
+					<div class="col-lg-9">
+						<input maxlength="150" type="text" class="form-control" name="nombre_completo" id="nombre_completo" value="<%%VALUE(nombre_completo)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Tratamiento -->
+				<div class="form-group clientes-tratamiento">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="tratamiento">Tratamiento</label>
+					<div class="col-lg-9">
+						<input maxlength="10" type="text" class="form-control" name="tratamiento" id="tratamiento" value="<%%VALUE(tratamiento)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Genero -->
+				<div class="form-group clientes-genero">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="genero">Genero</label>
+					<div class="col-lg-9">
+						<%%COMBO(genero)%%>
+					</div>
+				</div>
+
+				<!-- Field: Fecha nacimiento -->
+				<div class="form-group clientes-fecha_nacimiento">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="fecha_nacimiento-dd">Fecha nacimiento</label>
+					<div class="col-lg-9">
+						<%%COMBO(fecha_nacimiento)%%>
+					</div>
+				</div>
+
+				<!-- Field: Documento id -->
+				<div class="form-group clientes-documento_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="documento_id">Documento id</label>
+					<div class="col-lg-9">
+						<input maxlength="20" type="text" class="form-control" name="documento_id" id="documento_id" value="<%%VALUE(documento_id)%%>"><div class="text-danger vspacer-md" id="documento_id-uniqueness-note" style="display: none;"><%%TRANSLATION(unique field error)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Nacionalidad -->
+				<div class="form-group clientes-nacionalidad">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="nacionalidad">Nacionalidad</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="nacionalidad" id="nacionalidad" value="<%%VALUE(nacionalidad)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Estado civil -->
+				<div class="form-group clientes-estado_civil">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="estado_civil">Estado civil</label>
+					<div class="col-lg-9">
+						<input maxlength="30" type="text" class="form-control" name="estado_civil" id="estado_civil" value="<%%VALUE(estado_civil)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Telefono fijo -->
+				<div class="form-group clientes-telefono_fijo">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="telefono_fijo">Telefono fijo</label>
+					<div class="col-lg-9">
+						<input maxlength="15" type="text" class="form-control" name="telefono_fijo" id="telefono_fijo" value="<%%VALUE(telefono_fijo)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Telefono movil -->
+				<div class="form-group clientes-telefono_movil">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="telefono_movil">Telefono movil</label>
+					<div class="col-lg-9">
+						<input maxlength="15" type="text" class="form-control" name="telefono_movil" id="telefono_movil" value="<%%VALUE(telefono_movil)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Telefono adicional -->
+				<div class="form-group clientes-telefono_adicional">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="telefono_adicional">Telefono adicional</label>
+					<div class="col-lg-9">
+						<input maxlength="15" type="text" class="form-control" name="telefono_adicional" id="telefono_adicional" value="<%%VALUE(telefono_adicional)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Email -->
+				<div class="form-group clientes-email">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="email">Email</label>
+					<div class="col-lg-9">
+						<input maxlength="100" type="text" class="form-control" name="email" id="email" value="<%%VALUE(email)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Cliente telefonico -->
+				<div class="form-group clientes-cliente_telefonico">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cliente_telefonico">Cliente telefonico</label>
+					<div class="col-lg-9">
+						<input maxlength="4" type="text" class="form-control" name="cliente_telefonico" id="cliente_telefonico" value="<%%VALUE(cliente_telefonico)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Profesion -->
+				<div class="form-group clientes-profesion">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="profesion">Profesion</label>
+					<div class="col-lg-9">
+						<input maxlength="100" type="text" class="form-control" name="profesion" id="profesion" value="<%%VALUE(profesion)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Sector actividad -->
+				<div class="form-group clientes-sector_actividad">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="sector_actividad">Sector actividad</label>
+					<div class="col-lg-9">
+						<input maxlength="100" type="text" class="form-control" name="sector_actividad" id="sector_actividad" value="<%%VALUE(sector_actividad)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Empresa -->
+				<div class="form-group clientes-empresa">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="empresa">Empresa</label>
+					<div class="col-lg-9">
+						<input maxlength="100" type="text" class="form-control" name="empresa" id="empresa" value="<%%VALUE(empresa)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Fecha alta -->
+				<div class="form-group clientes-fecha_alta">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="fecha_alta-dd">Fecha alta</label>
+					<div class="col-lg-9">
+						<%%COMBO(fecha_alta)%%>
+					</div>
+				</div>
+
+				<!-- Field: Ultima modificacion -->
+				<div class="form-group clientes-ultima_modificacion">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Ultima modificacion</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="ultima_modificacion"><%%VALUE(ultima_modificacion)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Agencia id -->
+				<div class="form-group clientes-agencia_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="agencia_id">Agencia id</label>
+					<div class="col-lg-9">
+						<input maxlength="20" type="text" class="form-control" name="agencia_id" id="agencia_id" value="<%%VALUE(agencia_id)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Usuario id -->
+				<div class="form-group clientes-usuario_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="usuario_id">Usuario id</label>
+					<div class="col-lg-9">
+						<input maxlength="20" type="text" class="form-control" name="usuario_id" id="usuario_id" value="<%%VALUE(usuario_id)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Observaciones -->
+				<div class="form-group clientes-observaciones">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="observaciones">Observaciones</label>
+					<div class="col-lg-9">
+						<textarea maxlength="65500" class="form-control" name="observaciones" id="observaciones" rows=" 5"><%%VALUE(observaciones)%%></textarea>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2 dv-action-buttons" id="clientes_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+			$j('#clientes_dv_container-loading').addClass('hidden');
+			$j('#clientes_dv_container').removeClass('hidden');
+			if(!$j('.table_view').length || $j('[name=SelectedID]').val().length) AppGini.focusFormElement('clientes', 'cliente_id');
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+
+			if(true /* !embedded_mode */) {
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.removeItem(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'clientes',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+									// in case the parent record was updated, we should update auto-fills
+									var updaterName = field_id + '_update_autofills';
+									if(typeof(window[updaterName]) == 'function')
+										window[updaterName]();
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+			clientesUniqueFields.forEach(fieldName => enforce_uniqueness('clientes', fieldName));
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=clientes&id=<%%URLVALUE(cliente_id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=clientes&id=<%%URLVALUE(cliente_id)%%>');
+					}
+				);
+			}
+		});
+
+		var clientesUniqueFields = [
+			'cliente_id',
+			'documento_id',
+		];
+	</script>

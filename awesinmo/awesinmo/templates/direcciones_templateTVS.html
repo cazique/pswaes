@@ -1,0 +1,26 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the direcciones_init() hook (in hooks/direcciones.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="direcciones-direccion_id-<%%VALUE(direccion_id)%%>" class="direcciones-direccion_id text-right text-bold"><%%VALUE(direccion_id)%%></td>
+		<td id="direcciones-cliente_id-<%%VALUE(direccion_id)%%>" class="direcciones-cliente_id text-bold"><%%VALUE(cliente_id)%%></td>
+		<td id="direcciones-inmueble_id-<%%VALUE(direccion_id)%%>" class="direcciones-inmueble_id text-bold"><%%VALUE(inmueble_id)%%></td>
+		<td id="direcciones-tipo_direccion-<%%VALUE(direccion_id)%%>" class="direcciones-tipo_direccion text-bold"><%%VALUE(tipo_direccion)%%></td>
+		<td id="direcciones-calle-<%%VALUE(direccion_id)%%>" class="direcciones-calle text-bold"><%%VALUE(calle)%%></td>
+		<td id="direcciones-numero-<%%VALUE(direccion_id)%%>" class="direcciones-numero text-bold"><%%VALUE(numero)%%></td>
+		<td id="direcciones-piso-<%%VALUE(direccion_id)%%>" class="direcciones-piso text-bold"><%%VALUE(piso)%%></td>
+		<td id="direcciones-puerta-<%%VALUE(direccion_id)%%>" class="direcciones-puerta text-bold"><%%VALUE(puerta)%%></td>
+		<td id="direcciones-escalera-<%%VALUE(direccion_id)%%>" class="direcciones-escalera text-bold"><%%VALUE(escalera)%%></td>
+		<td id="direcciones-codigo_postal-<%%VALUE(direccion_id)%%>" class="direcciones-codigo_postal text-bold"><%%VALUE(codigo_postal)%%></td>
+		<td id="direcciones-localidad-<%%VALUE(direccion_id)%%>" class="direcciones-localidad text-bold"><%%VALUE(localidad)%%></td>
+		<td id="direcciones-provincia-<%%VALUE(direccion_id)%%>" class="direcciones-provincia text-bold"><%%VALUE(provincia)%%></td>
+		<td id="direcciones-pais-<%%VALUE(direccion_id)%%>" class="direcciones-pais text-bold"><%%VALUE(pais)%%></td>
+		<td id="direcciones-referencia_catastral-<%%VALUE(direccion_id)%%>" class="direcciones-referencia_catastral text-bold"><%%VALUE(referencia_catastral)%%></td>
+		<td id="direcciones-coordenadas_latitud-<%%VALUE(direccion_id)%%>" class="direcciones-coordenadas_latitud text-right text-bold"><%%VALUE(coordenadas_latitud)%%></td>
+		<td id="direcciones-coordenadas_longitud-<%%VALUE(direccion_id)%%>" class="direcciones-coordenadas_longitud text-right text-bold"><%%VALUE(coordenadas_longitud)%%></td>
+		<td id="direcciones-principal-<%%VALUE(direccion_id)%%>" class="direcciones-principal text-right text-bold"><%%VALUE(principal)%%></td>
+		<td id="direcciones-fecha_alta-<%%VALUE(direccion_id)%%>" class="direcciones-fecha_alta text-bold"><%%VALUE(fecha_alta)%%></td>
+		<td id="direcciones-ultima_modificacion-<%%VALUE(direccion_id)%%>" class="direcciones-ultima_modificacion text-bold"><%%VALUE(ultima_modificacion)%%></td>

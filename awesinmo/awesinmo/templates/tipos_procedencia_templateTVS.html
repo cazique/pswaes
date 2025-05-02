@@ -1,0 +1,10 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the tipos_procedencia_init() hook (in hooks/tipos_procedencia.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="tipos_procedencia-tipo_procedencia_id-<%%VALUE(tipo_procedencia_id)%%>" class="tipos_procedencia-tipo_procedencia_id text-right text-bold"><%%VALUE(tipo_procedencia_id)%%></td>
+		<td id="tipos_procedencia-nombre-<%%VALUE(tipo_procedencia_id)%%>" class="tipos_procedencia-nombre text-bold"><%%VALUE(nombre)%%></td>
+		<td id="tipos_procedencia-descripcion-<%%VALUE(tipo_procedencia_id)%%>" class="tipos_procedencia-descripcion text-bold"><%%VALUE(descripcion)%%></td>

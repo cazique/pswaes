@@ -1,0 +1,11 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the motivos_cierre_init() hook (in hooks/motivos_cierre.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="motivos_cierre-motivo_cierre_id-<%%VALUE(motivo_cierre_id)%%>" class="motivos_cierre-motivo_cierre_id text-right"><%%SELECT%%><%%VALUE(motivo_cierre_id)%%><%%ENDSELECT%%></td>
+		<td id="motivos_cierre-nombre-<%%VALUE(motivo_cierre_id)%%>" class="motivos_cierre-nombre"><%%SELECT%%><%%VALUE(nombre)%%><%%ENDSELECT%%></td>
+		<td id="motivos_cierre-descripcion-<%%VALUE(motivo_cierre_id)%%>" class="motivos_cierre-descripcion"><%%SELECT%%><%%VALUE(descripcion)%%><%%ENDSELECT%%></td>
+		<td id="motivos_cierre-es_positivo-<%%VALUE(motivo_cierre_id)%%>" class="motivos_cierre-es_positivo text-right"><%%SELECT%%><%%VALUE(es_positivo)%%><%%ENDSELECT%%></td>

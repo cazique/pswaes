@@ -1,0 +1,30 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the encargos_init() hook (in hooks/encargos.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="encargos-encargo_id-<%%VALUE(encargo_id)%%>" class="encargos-encargo_id"><%%SELECT%%><%%VALUE(encargo_id)%%><%%ENDSELECT%%></td>
+		<td id="encargos-referencia-<%%VALUE(encargo_id)%%>" class="encargos-referencia"><%%SELECT%%><%%VALUE(referencia)%%><%%ENDSELECT%%></td>
+		<td id="encargos-inmueble_id-<%%VALUE(encargo_id)%%>" class="encargos-inmueble_id"><%%SELECT%%><%%VALUE(inmueble_id)%%><%%ENDSELECT%%></td>
+		<td id="encargos-propietario_id-<%%VALUE(encargo_id)%%>" class="encargos-propietario_id"><%%SELECT%%><%%VALUE(propietario_id)%%><%%ENDSELECT%%></td>
+		<td id="encargos-estado_id-<%%VALUE(encargo_id)%%>" class="encargos-estado_id text-right"><%%SELECT%%><%%VALUE(estado_id)%%><%%ENDSELECT%%></td>
+		<td id="encargos-estado_contacto_id-<%%VALUE(encargo_id)%%>" class="encargos-estado_contacto_id text-right"><%%SELECT%%><%%VALUE(estado_contacto_id)%%><%%ENDSELECT%%></td>
+		<td id="encargos-motivo-<%%VALUE(encargo_id)%%>" class="encargos-motivo"><%%SELECT%%><%%VALUE(motivo)%%><%%ENDSELECT%%></td>
+		<td id="encargos-tipo_procedencia_id-<%%VALUE(encargo_id)%%>" class="encargos-tipo_procedencia_id text-right"><%%SELECT%%><%%VALUE(tipo_procedencia_id)%%><%%ENDSELECT%%></td>
+		<td id="encargos-precio-<%%VALUE(encargo_id)%%>" class="encargos-precio text-right"><%%SELECT%%><%%VALUE(precio)%%><%%ENDSELECT%%></td>
+		<td id="encargos-precio_parking_incluido-<%%VALUE(encargo_id)%%>" class="encargos-precio_parking_incluido text-right"><%%SELECT%%><%%VALUE(precio_parking_incluido)%%><%%ENDSELECT%%></td>
+		<td id="encargos-valoracion-<%%VALUE(encargo_id)%%>" class="encargos-valoracion text-right"><%%SELECT%%><%%VALUE(valoracion)%%><%%ENDSELECT%%></td>
+		<td id="encargos-valoracion_solo_inmueble-<%%VALUE(encargo_id)%%>" class="encargos-valoracion_solo_inmueble text-right"><%%SELECT%%><%%VALUE(valoracion_solo_inmueble)%%><%%ENDSELECT%%></td>
+		<td id="encargos-nuda_propiedad-<%%VALUE(encargo_id)%%>" class="encargos-nuda_propiedad text-right"><%%SELECT%%><%%VALUE(nuda_propiedad)%%><%%ENDSELECT%%></td>
+		<td id="encargos-tratabilidad-<%%VALUE(encargo_id)%%>" class="encargos-tratabilidad text-right"><%%SELECT%%><%%VALUE(tratabilidad)%%><%%ENDSELECT%%></td>
+		<td id="encargos-fecha_creacion-<%%VALUE(encargo_id)%%>" class="encargos-fecha_creacion"><%%SELECT%%><%%VALUE(fecha_creacion)%%><%%ENDSELECT%%></td>
+		<td id="encargos-fecha_modificacion-<%%VALUE(encargo_id)%%>" class="encargos-fecha_modificacion"><%%SELECT%%><%%VALUE(fecha_modificacion)%%><%%ENDSELECT%%></td>
+		<td id="encargos-fecha_cierre-<%%VALUE(encargo_id)%%>" class="encargos-fecha_cierre"><%%SELECT%%><%%VALUE(fecha_cierre)%%><%%ENDSELECT%%></td>
+		<td id="encargos-motivo_cierre_id-<%%VALUE(encargo_id)%%>" class="encargos-motivo_cierre_id text-right"><%%SELECT%%><%%VALUE(motivo_cierre_id)%%><%%ENDSELECT%%></td>
+		<td id="encargos-fecha_ultima_cita-<%%VALUE(encargo_id)%%>" class="encargos-fecha_ultima_cita"><%%SELECT%%><%%VALUE(fecha_ultima_cita)%%><%%ENDSELECT%%></td>
+		<td id="encargos-fecha_ultima_actividad-<%%VALUE(encargo_id)%%>" class="encargos-fecha_ultima_actividad"><%%SELECT%%><%%VALUE(fecha_ultima_actividad)%%><%%ENDSELECT%%></td>
+		<td id="encargos-fecha_ultimo_contacto-<%%VALUE(encargo_id)%%>" class="encargos-fecha_ultimo_contacto"><%%SELECT%%><%%VALUE(fecha_ultimo_contacto)%%><%%ENDSELECT%%></td>
+		<td id="encargos-nota_privada-<%%VALUE(encargo_id)%%>" class="encargos-nota_privada"><%%SELECT%%><%%VALUE(nota_privada)%%><%%ENDSELECT%%></td>
+		<td id="encargos-llaves_oficina-<%%VALUE(encargo_id)%%>" class="encargos-llaves_oficina text-right"><%%SELECT%%><%%VALUE(llaves_oficina)%%><%%ENDSELECT%%></td>

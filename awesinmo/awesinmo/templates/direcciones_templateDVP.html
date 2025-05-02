@@ -1,0 +1,162 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: Direccion id -->
+		<div class="form-group direcciones-direccion_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Direccion id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(direccion_id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Cliente id -->
+		<div class="form-group direcciones-cliente_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Cliente id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cliente_id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Inmueble id -->
+		<div class="form-group direcciones-inmueble_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Inmueble id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(inmueble_id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Tipo direccion -->
+		<div class="form-group direcciones-tipo_direccion" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tipo direccion</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(tipo_direccion)%%></div>
+			</div>
+		</div>
+		<!-- Field: Calle -->
+		<div class="form-group direcciones-calle" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Calle</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(calle)%%></div>
+			</div>
+		</div>
+		<!-- Field: Numero -->
+		<div class="form-group direcciones-numero" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Numero</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(numero)%%></div>
+			</div>
+		</div>
+		<!-- Field: Piso -->
+		<div class="form-group direcciones-piso" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Piso</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(piso)%%></div>
+			</div>
+		</div>
+		<!-- Field: Puerta -->
+		<div class="form-group direcciones-puerta" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Puerta</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(puerta)%%></div>
+			</div>
+		</div>
+		<!-- Field: Escalera -->
+		<div class="form-group direcciones-escalera" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Escalera</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(escalera)%%></div>
+			</div>
+		</div>
+		<!-- Field: Codigo postal -->
+		<div class="form-group direcciones-codigo_postal" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Codigo postal</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(codigo_postal)%%></div>
+			</div>
+		</div>
+		<!-- Field: Localidad -->
+		<div class="form-group direcciones-localidad" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Localidad</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(localidad)%%></div>
+			</div>
+		</div>
+		<!-- Field: Provincia -->
+		<div class="form-group direcciones-provincia" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Provincia</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(provincia)%%></div>
+			</div>
+		</div>
+		<!-- Field: Pais -->
+		<div class="form-group direcciones-pais" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Pais</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(pais)%%></div>
+			</div>
+		</div>
+		<!-- Field: Referencia catastral -->
+		<div class="form-group direcciones-referencia_catastral" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Referencia catastral</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(referencia_catastral)%%></div>
+			</div>
+		</div>
+		<!-- Field: Coordenadas latitud -->
+		<div class="form-group direcciones-coordenadas_latitud" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Coordenadas latitud</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(coordenadas_latitud)%%></div>
+			</div>
+		</div>
+		<!-- Field: Coordenadas longitud -->
+		<div class="form-group direcciones-coordenadas_longitud" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Coordenadas longitud</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(coordenadas_longitud)%%></div>
+			</div>
+		</div>
+		<!-- Field: Principal -->
+		<div class="form-group direcciones-principal" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Principal</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(principal)%%></div>
+			</div>
+		</div>
+		<!-- Field: Fecha alta -->
+		<div class="form-group direcciones-fecha_alta" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Fecha alta</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(fecha_alta)%%></div>
+			</div>
+		</div>
+		<!-- Field: Ultima modificacion -->
+		<div class="form-group direcciones-ultima_modificacion" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ultima modificacion</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(ultima_modificacion)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<script>
+	$j(function() {
+		// render read-only checkboxes in DVP
+		$j('form input[type=checkbox]:not(.hidden):checked')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-check"></i>');
+		$j('form input[type=checkbox]:not(.hidden):not(:checked)')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-unchecked"></i>')
+	})
+</script>

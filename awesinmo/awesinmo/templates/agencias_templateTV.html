@@ -1,0 +1,18 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the agencias_init() hook (in hooks/agencias.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="agencias-agencia_id-<%%VALUE(agencia_id)%%>" class="agencias-agencia_id"><%%SELECT%%><%%VALUE(agencia_id)%%><%%ENDSELECT%%></td>
+		<td id="agencias-nombre-<%%VALUE(agencia_id)%%>" class="agencias-nombre"><%%SELECT%%><%%VALUE(nombre)%%><%%ENDSELECT%%></td>
+		<td id="agencias-direccion-<%%VALUE(agencia_id)%%>" class="agencias-direccion"><%%SELECT%%><%%VALUE(direccion)%%><%%ENDSELECT%%></td>
+		<td id="agencias-codigo_postal-<%%VALUE(agencia_id)%%>" class="agencias-codigo_postal"><%%SELECT%%><%%VALUE(codigo_postal)%%><%%ENDSELECT%%></td>
+		<td id="agencias-localidad-<%%VALUE(agencia_id)%%>" class="agencias-localidad"><%%SELECT%%><%%VALUE(localidad)%%><%%ENDSELECT%%></td>
+		<td id="agencias-provincia-<%%VALUE(agencia_id)%%>" class="agencias-provincia"><%%SELECT%%><%%VALUE(provincia)%%><%%ENDSELECT%%></td>
+		<td id="agencias-telefono-<%%VALUE(agencia_id)%%>" class="agencias-telefono"><%%SELECT%%><%%VALUE(telefono)%%><%%ENDSELECT%%></td>
+		<td id="agencias-email-<%%VALUE(agencia_id)%%>" class="agencias-email"><%%SELECT%%><%%VALUE(email)%%><%%ENDSELECT%%></td>
+		<td id="agencias-responsable_id-<%%VALUE(agencia_id)%%>" class="agencias-responsable_id"><%%SELECT%%><%%VALUE(responsable_id)%%><%%ENDSELECT%%></td>
+		<td id="agencias-fecha_alta-<%%VALUE(agencia_id)%%>" class="agencias-fecha_alta"><%%SELECT%%><%%VALUE(fecha_alta)%%><%%ENDSELECT%%></td>
+		<td id="agencias-activo-<%%VALUE(agencia_id)%%>" class="agencias-activo text-right"><%%SELECT%%><%%VALUE(activo)%%><%%ENDSELECT%%></td>

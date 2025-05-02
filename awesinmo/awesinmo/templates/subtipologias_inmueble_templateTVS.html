@@ -1,0 +1,11 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the subtipologias_inmueble_init() hook (in hooks/subtipologias_inmueble.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="subtipologias_inmueble-subtipologia_id-<%%VALUE(subtipologia_id)%%>" class="subtipologias_inmueble-subtipologia_id text-right text-bold"><%%VALUE(subtipologia_id)%%></td>
+		<td id="subtipologias_inmueble-tipologia_id-<%%VALUE(subtipologia_id)%%>" class="subtipologias_inmueble-tipologia_id text-right text-bold"><%%VALUE(tipologia_id)%%></td>
+		<td id="subtipologias_inmueble-nombre-<%%VALUE(subtipologia_id)%%>" class="subtipologias_inmueble-nombre text-bold"><%%VALUE(nombre)%%></td>
+		<td id="subtipologias_inmueble-descripcion-<%%VALUE(subtipologia_id)%%>" class="subtipologias_inmueble-descripcion text-bold"><%%VALUE(descripcion)%%></td>
